@@ -4,13 +4,10 @@ export default class Transcriptor {
   toRna(dna) {
     validateDna(dna);
 
-    let rna = dna.split('').map((nucleotide) => NUCLEOTIDES[nucleotide]).join('');
-
-    return rna;
+    return dna.split('').map((nucleotide) => NUCLEOTIDES[nucleotide]).join('');
   }
 }
 
 const validateDna = (dna) => {
   if(/[^ACGT]/.test(dna)) throw new Error('Invalid input DNA.');
-  
 }

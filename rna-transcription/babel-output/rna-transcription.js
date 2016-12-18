@@ -20,11 +20,9 @@ var Transcriptor = (function () {
     value: function toRna(dna) {
       validateDna(dna);
 
-      var rna = dna.split('').map(function (nucleotide) {
+      return dna.split('').map(function (nucleotide) {
         return NUCLEOTIDES[nucleotide];
       }).join('');
-
-      return rna;
     }
   }]);
 
